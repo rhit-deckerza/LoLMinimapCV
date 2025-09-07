@@ -1,0 +1,23 @@
+2025-09-07 13:13:39,852 INFO    MainThread:3096 [wandb_setup.py:_flush():68] Current SDK version is 0.19.10
+2025-09-07 13:13:39,852 INFO    MainThread:3096 [wandb_setup.py:_flush():68] Configure stats pid to 3096
+2025-09-07 13:13:39,852 INFO    MainThread:3096 [wandb_setup.py:_flush():68] Loading settings from C:\Users\zadec\.config\wandb\settings
+2025-09-07 13:13:39,852 INFO    MainThread:3096 [wandb_setup.py:_flush():68] Loading settings from C:\Users\zadec\Desktop\CS_Projects\LoLMinimapCV\wandb\settings
+2025-09-07 13:13:39,852 INFO    MainThread:3096 [wandb_setup.py:_flush():68] Loading settings from environment variables
+2025-09-07 13:13:39,853 INFO    MainThread:3096 [wandb_init.py:setup_run_log_directory():724] Logging user logs to C:\Users\zadec\Desktop\CS_Projects\LoLMinimapCV\wandb\run-20250907_131339-ge8bo735\logs\debug.log
+2025-09-07 13:13:39,853 INFO    MainThread:3096 [wandb_init.py:setup_run_log_directory():725] Logging internal logs to C:\Users\zadec\Desktop\CS_Projects\LoLMinimapCV\wandb\run-20250907_131339-ge8bo735\logs\debug-internal.log
+2025-09-07 13:13:39,853 INFO    MainThread:3096 [wandb_init.py:init():852] calling init triggers
+2025-09-07 13:13:39,853 INFO    MainThread:3096 [wandb_init.py:init():857] wandb.init called with sweep_config: {}
+config: {'task': 'detect', 'mode': 'train', 'model': 'yolov8s.pt', 'data': 'C:/Users/zadec/Desktop/CS_Projects/LoLMinimapCV/dataset_split/dataset.yaml', 'epochs': 100, 'time': None, 'patience': 20, 'batch': 0, 'imgsz': 960, 'save': True, 'save_period': -1, 'cache': False, 'device': '0', 'workers': 8, 'project': 'LoLMinimapCV', 'name': 'LoLMinimapCV-yolov8s', 'exist_ok': False, 'pretrained': True, 'optimizer': 'auto', 'verbose': True, 'seed': 0, 'deterministic': True, 'single_cls': False, 'rect': False, 'cos_lr': False, 'close_mosaic': 10, 'resume': False, 'amp': True, 'fraction': 1.0, 'profile': False, 'freeze': None, 'multi_scale': False, 'overlap_mask': True, 'mask_ratio': 4, 'dropout': 0.0, 'val': True, 'split': 'val', 'save_json': False, 'save_hybrid': False, 'conf': None, 'iou': 0.7, 'max_det': 300, 'half': False, 'dnn': False, 'plots': True, 'source': None, 'vid_stride': 1, 'stream_buffer': False, 'visualize': False, 'augment': False, 'agnostic_nms': False, 'classes': None, 'retina_masks': False, 'embed': None, 'show': False, 'save_frames': False, 'save_txt': False, 'save_conf': False, 'save_crop': False, 'show_labels': True, 'show_conf': True, 'show_boxes': True, 'line_width': None, 'format': 'torchscript', 'keras': False, 'optimize': False, 'int8': False, 'dynamic': False, 'simplify': True, 'opset': None, 'workspace': 4, 'nms': False, 'lr0': 0.01, 'lrf': 0.01, 'momentum': 0.937, 'weight_decay': 0.0005, 'warmup_epochs': 3.0, 'warmup_momentum': 0.8, 'warmup_bias_lr': 0.1, 'box': 7.5, 'cls': 0.5, 'dfl': 1.5, 'pose': 12.0, 'kobj': 1.0, 'label_smoothing': 0.0, 'nbs': 64, 'hsv_h': 0.015, 'hsv_s': 0.7, 'hsv_v': 0.4, 'degrees': 0.0, 'translate': 0.1, 'scale': 0.5, 'shear': 0.0, 'perspective': 0.0, 'flipud': 0.0, 'fliplr': 0.5, 'bgr': 0.0, 'mosaic': 1.0, 'mixup': 0.0, 'copy_paste': 0.0, 'copy_paste_mode': 'flip', 'auto_augment': 'randaugment', 'erasing': 0.4, 'crop_fraction': 1.0, 'cfg': None, 'tracker': 'botsort.yaml', 'save_dir': 'LoLMinimapCV\\LoLMinimapCV-yolov8s', '_wandb': {}}
+2025-09-07 13:13:39,853 INFO    MainThread:3096 [wandb_init.py:init():893] starting backend
+2025-09-07 13:13:39,853 INFO    MainThread:3096 [wandb_init.py:init():897] sending inform_init request
+2025-09-07 13:13:39,890 INFO    MainThread:3096 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=spawn, using: spawn
+2025-09-07 13:13:39,890 INFO    MainThread:3096 [wandb_init.py:init():907] backend started and connected
+2025-09-07 13:13:39,892 INFO    MainThread:3096 [wandb_init.py:init():1002] updated telemetry
+2025-09-07 13:13:39,925 INFO    MainThread:3096 [wandb_init.py:init():1026] communicating run to backend with 90.0 second timeout
+2025-09-07 13:13:40,309 INFO    MainThread:3096 [wandb_init.py:init():1101] starting run threads in backend
+2025-09-07 13:13:40,625 INFO    MainThread:3096 [wandb_run.py:_console_start():2566] atexit reg
+2025-09-07 13:13:40,625 INFO    MainThread:3096 [wandb_run.py:_redirect():2414] redirect: wrap_raw
+2025-09-07 13:13:40,625 INFO    MainThread:3096 [wandb_run.py:_redirect():2483] Wrapping output streams.
+2025-09-07 13:13:40,625 INFO    MainThread:3096 [wandb_run.py:_redirect():2506] Redirects installed.
+2025-09-07 13:13:40,628 INFO    MainThread:3096 [wandb_init.py:init():1147] run started, returning control to user process
+2025-09-07 13:15:49,858 INFO    MsgRouterThr:3096 [mailbox.py:close():129] [no run ID] Closing mailbox, abandoning 1 handles.

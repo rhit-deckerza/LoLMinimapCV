@@ -1,0 +1,66 @@
+Freezing layer 'model.22.dfl.conv.weight'
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks...
+Downloading https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n.pt to 'yolo11n.pt'...
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5.35M/5.35M [00:00<00:00, 42.6MB/s]
+[34m[1mAMP: [0mchecks passed ✅
+[34m[1mAutoBatch: [0mComputing optimal batch size for imgsz=960 at 60.0% CUDA memory utilization.
+[34m[1mAutoBatch: [0mCUDA:0 (NVIDIA GeForce RTX 4090 Laptop GPU) 15.99G total, 0.14G reserved, 0.13G allocated, 15.72G free
+      Params      GFLOPs  GPU_mem (GB)  forward (ms) backward (ms)                   input                  output
+    11201777       65.28         0.635         41.59         155.9        (1, 3, 960, 960)                    list
+    11201777       130.6         1.103         40.51          49.1        (2, 3, 960, 960)                    list
+    11201777       261.1         2.087         61.42         50.35        (4, 3, 960, 960)                    list
+    11201777       522.2         4.029         102.9         51.86        (8, 3, 960, 960)                    list
+    11201777        1044         8.103         169.5          95.4       (16, 3, 960, 960)                    list
+[34m[1mAutoBatch: [0mUsing batch-size 18 for CUDA:0 9.34G/15.99G (58%) ✅
+[34m[1mtrain: [0mScanning C:\Users\zadec\Desktop\CS_Projects\LoLMinimapCV\dataset\labels... 2545 images, 0 backgrounds, 0 corrupt: 100%|██████████| 2545/2545 [00:05<00:00, 477.11it/s][0m
+[34m[1mtrain: [0mNew cache created: C:\Users\zadec\Desktop\CS_Projects\LoLMinimapCV\dataset\labels.cache
+[34m[1mval: [0mScanning C:\Users\zadec\Desktop\CS_Projects\LoLMinimapCV\dataset\labels.cache... 2545 images, 0 backgrounds, 0 corrupt: 100%|██████████| 2545/2545 [00:00<?, ?it/s][0m
+Plotting labels to runs\icons-yolov8s2\labels.jpg...
+[34m[1moptimizer:[0m 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically...
+[34m[1moptimizer:[0m AdamW(lr=5.7e-05, momentum=0.9) with parameter groups 57 weight(decay=0.0), 64 weight(decay=0.0005625000000000001), 63 bias(decay=0.0)
+[34m[1mTensorBoard: [0mmodel graph visualization added ✅
+Image sizes 960 train, 960 val
+Using 8 dataloader workers
+Logging results to [1mruns\icons-yolov8s2[0m
+Starting training for 100 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      1/100      10.6G     0.5273      5.445     0.8785         85        960: 100%|██████████| 142/142 [01:00<00:00,  2.37it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  83%|████████▎ | 59/71 [00:31<00:06,  1.86it/s]
+Traceback (most recent call last):
+  File "C:\Users\zadec\Desktop\CS_Projects\LoLMinimapCV\train_yolov8s.py", line 72, in <module>
+    main()
+  File "C:\Users\zadec\Desktop\CS_Projects\LoLMinimapCV\train_yolov8s.py", line 62, in main
+    model.train(**train_kwargs)
+  File "C:\Users\zadec\AppData\Roaming\Python\Python312\site-packages\ultralytics\engine\model.py", line 802, in train
+    self.trainer.train()
+  File "C:\Users\zadec\AppData\Roaming\Python\Python312\site-packages\ultralytics\engine\trainer.py", line 207, in train
+    self._do_train(world_size)
+  File "C:\Users\zadec\AppData\Roaming\Python\Python312\site-packages\ultralytics\engine\trainer.py", line 437, in _do_train
+    self.metrics, self.fitness = self.validate()
+                                 ^^^^^^^^^^^^^^^
+  File "C:\Users\zadec\AppData\Roaming\Python\Python312\site-packages\ultralytics\engine\trainer.py", line 600, in validate
+    metrics = self.validator(self)
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zadec\AppData\Roaming\Python\Python312\site-packages\torch\utils\_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zadec\AppData\Roaming\Python\Python312\site-packages\ultralytics\engine\validator.py", line 178, in __call__
+    with dt[1]:
+         ~~^^^
+  File "C:\Users\zadec\AppData\Roaming\Python\Python312\site-packages\ultralytics\utils\ops.py", line 51, in __exit__
+    self.dt = self.time() - self.start  # delta-time
+              ^^^^^^^^^^^
+  File "C:\Users\zadec\AppData\Roaming\Python\Python312\site-packages\ultralytics\utils\ops.py", line 61, in time
+    torch.cuda.synchronize(self.device)
+  File "C:\Users\zadec\AppData\Roaming\Python\Python312\site-packages\torch\cuda\__init__.py", line 985, in synchronize
+    return torch._C._cuda_synchronize()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "C:\Users\zadec\Desktop\CS_Projects\LoLMinimapCV\train_yolov8s.py", line 72, in <module>
+    main()
+  File "C:\Users\zadec\Desktop\CS_Projects\LoLMinimapCV\train_yolov8s.py", line 62, in main
+    model.train(**train_kwargs)
+  File "C:\Users\zadec\AppData\Roaming\Python\Python312\site-packages\ultralytics\engine\model.py", line 802, in train
+

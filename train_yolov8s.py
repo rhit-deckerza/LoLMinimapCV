@@ -34,8 +34,8 @@ def main():
     ap.add_argument("--batch", default="auto")
     ap.add_argument("--device", default=None, help="e.g. 0, 0,1, or cpu")
     ap.add_argument("--workers", type=int, default=8)
-    ap.add_argument("--project", default="runs/detect")
-    ap.add_argument("--name", default="icons-yolov8s")
+    ap.add_argument("--project", default="LoLMinimapCV")
+    ap.add_argument("--name", default="LoLMinimapCV-yolov8s")
     ap.add_argument("--patience", type=int, default=20, help="Early stopping patience")
     ap.add_argument("--lr0", type=float, default=None, help="Base LR (optional)")
     ap.add_argument("--resume", action="store_true", help="Resume last run (in same project/name)")
@@ -48,7 +48,7 @@ def main():
         imgsz=args.imgsz,
         epochs=args.epochs,
         batch=0,
-        device="cpu",
+        device=args.device,
         workers=args.workers,
         project=args.project,
         name=args.name,

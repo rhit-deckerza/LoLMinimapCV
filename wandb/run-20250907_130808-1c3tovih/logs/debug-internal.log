@@ -1,0 +1,15 @@
+{"time":"2025-09-07T13:08:08.0744815-04:00","level":"INFO","msg":"stream: starting","core version":"0.19.10","symlink path":"C:\\Users\\zadec\\Desktop\\CS_Projects\\LoLMinimapCV\\wandb\\run-20250907_130808-1c3tovih\\logs\\debug-core.log"}
+{"time":"2025-09-07T13:08:08.4740867-04:00","level":"INFO","msg":"created new stream","id":"1c3tovih"}
+{"time":"2025-09-07T13:08:08.4740867-04:00","level":"INFO","msg":"stream: started","id":"1c3tovih"}
+{"time":"2025-09-07T13:08:08.4740867-04:00","level":"INFO","msg":"handler: started","stream_id":"1c3tovih"}
+{"time":"2025-09-07T13:08:08.4740867-04:00","level":"INFO","msg":"sender: started","stream_id":"1c3tovih"}
+{"time":"2025-09-07T13:08:08.4746018-04:00","level":"INFO","msg":"writer: Do: started","stream_id":"1c3tovih"}
+{"time":"2025-09-07T13:08:08.6952746-04:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-09-07T13:11:14.9133056-04:00","level":"INFO","msg":"stream: closing","id":"1c3tovih"}
+{"time":"2025-09-07T13:11:14.9145211-04:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-09-07T13:11:14.9154098-04:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-09-07T13:11:15.2968427-04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-09-07T13:11:15.4722411-04:00","level":"INFO","msg":"sender: closed","stream_id":"1c3tovih"}
+{"time":"2025-09-07T13:11:15.4727452-04:00","level":"INFO","msg":"handler: closed","stream_id":"1c3tovih"}
+{"time":"2025-09-07T13:11:15.4727452-04:00","level":"INFO","msg":"writer: Close: closed","stream_id":"1c3tovih"}
+{"time":"2025-09-07T13:11:15.4727452-04:00","level":"INFO","msg":"stream: closed","id":"1c3tovih"}

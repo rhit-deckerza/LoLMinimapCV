@@ -1,0 +1,54 @@
+{
+  "os": "Windows-11-10.0.26100-SP0",
+  "python": "CPython 3.12.6",
+  "startedAt": "2025-09-07T17:08:08.066987Z",
+  "args": [
+    "--data",
+    "dataset/labels/dataset.yaml",
+    "--imgsz",
+    "960",
+    "--epochs",
+    "100",
+    "--batch",
+    "0",
+    "--device",
+    "0"
+  ],
+  "program": "C:\\Users\\zadec\\Desktop\\CS_Projects\\LoLMinimapCV\\train_yolov8s.py",
+  "codePath": "train_yolov8s.py",
+  "git": {
+    "remote": "https://github.com/rhit-deckerza/LoLMinimapCV.git",
+    "commit": "9bc415cb9337d23bbfd7579204751fc86fcfb444"
+  },
+  "email": "zadecker@gmail.com",
+  "root": "C:\\Users\\zadec\\Desktop\\CS_Projects\\LoLMinimapCV",
+  "host": "LAPTOPINATOR900",
+  "executable": "C:\\Python312\\python.exe",
+  "codePathLocal": "train_yolov8s.py",
+  "cpu_count": 16,
+  "cpu_count_logical": 22,
+  "gpu": "NVIDIA GeForce RTX 4090 Laptop GPU",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "2018720944128",
+      "used": "1600606339072"
+    }
+  },
+  "memory": {
+    "total": "33736097792"
+  },
+  "cpu": {
+    "count": 16,
+    "countLogical": 22
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce RTX 4090 Laptop GPU",
+      "memoryTotal": "17171480576",
+      "cudaCores": 9728,
+      "architecture": "Ada"
+    }
+  ],
+  "cudaVersion": "12.6"
+}

@@ -1,0 +1,63 @@
+Freezing layer 'model.22.dfl.conv.weight'
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks...
+[34m[1mAMP: [0mchecks passed ✅
+[34m[1mAutoBatch: [0mComputing optimal batch size for imgsz=960 at 60.0% CUDA memory utilization.
+[34m[1mAutoBatch: [0mCUDA:0 (NVIDIA GeForce RTX 4090 Laptop GPU) 15.99G total, 0.14G reserved, 0.13G allocated, 15.72G free
+      Params      GFLOPs  GPU_mem (GB)  forward (ms) backward (ms)                   input                  output
+    11201777       65.28         0.635         37.49           126        (1, 3, 960, 960)                    list
+    11201777       130.6         1.103          33.6         47.37        (2, 3, 960, 960)                    list
+    11201777       261.1         2.087         65.57         50.68        (4, 3, 960, 960)                    list
+    11201777       522.2         4.029         110.4         51.23        (8, 3, 960, 960)                    list
+    11201777        1044         8.103           163         98.82       (16, 3, 960, 960)                    list
+[34m[1mAutoBatch: [0mUsing batch-size 18 for CUDA:0 9.34G/15.99G (58%) ✅
+[34m[1mtrain: [0mScanning C:\Users\zadec\Desktop\CS_Projects\LoLMinimapCV\dataset_split\labels\train... 2036 images, 0 backgrounds, 0 corrupt: 100%|██████████| 2036/2036 [00:02<00:00, 778.16it/s][0m
+[34m[1mtrain: [0mNew cache created: C:\Users\zadec\Desktop\CS_Projects\LoLMinimapCV\dataset_split\labels\train.cache
+[34m[1mval: [0mScanning C:\Users\zadec\Desktop\CS_Projects\LoLMinimapCV\dataset_split\labels\val... 509 images, 0 backgrounds, 0 corrupt: 100%|██████████| 509/509 [00:01<00:00, 477.12it/s][0m
+[34m[1mval: [0mNew cache created: C:\Users\zadec\Desktop\CS_Projects\LoLMinimapCV\dataset_split\labels\val.cache
+Plotting labels to LoLMinimapCV\LoLMinimapCV-yolov8s\labels.jpg...
+[34m[1moptimizer:[0m 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically...
+[34m[1moptimizer:[0m AdamW(lr=5.7e-05, momentum=0.9) with parameter groups 57 weight(decay=0.0), 64 weight(decay=0.0005625000000000001), 63 bias(decay=0.0)
+[34m[1mTensorBoard: [0mmodel graph visualization added ✅
+Image sizes 960 train, 960 val
+Using 8 dataloader workers
+Logging results to [1mLoLMinimapCV\LoLMinimapCV-yolov8s[0m
+Starting training for 100 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      1/100      10.6G     0.5411      5.646     0.8882         23        960: 100%|██████████| 114/114 [00:45<00:00,  2.53it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 15/15 [00:06<00:00,  2.30it/s]
+                   all        509       3800      0.015      0.364      0.027     0.0261
+Traceback (most recent call last):
+  File "C:\Users\zadec\Desktop\CS_Projects\LoLMinimapCV\train_yolov8s.py", line 72, in <module>
+    main()
+  File "C:\Users\zadec\Desktop\CS_Projects\LoLMinimapCV\train_yolov8s.py", line 62, in main
+    model.train(**train_kwargs)
+  File "C:\Users\zadec\AppData\Roaming\Python\Python312\site-packages\ultralytics\engine\model.py", line 802, in train
+    self.trainer.train()
+  File "C:\Users\zadec\AppData\Roaming\Python\Python312\site-packages\ultralytics\engine\trainer.py", line 207, in train
+    self._do_train(world_size)
+  File "C:\Users\zadec\AppData\Roaming\Python\Python312\site-packages\ultralytics\engine\trainer.py", line 458, in _do_train
+    self.run_callbacks("on_fit_epoch_end")
+  File "C:\Users\zadec\AppData\Roaming\Python\Python312\site-packages\ultralytics\engine\trainer.py", line 168, in run_callbacks
+    callback(self)
+  File "C:\Users\zadec\AppData\Roaming\Python\Python312\site-packages\ultralytics\utils\callbacks\raytune.py", line 17, in on_fit_epoch_end
+    if ray.train._internal.session._get_session():  # replacement for deprecated ray.tune.is_session_enabled()
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'ray.train._internal.session' has no attribute '_get_session'. Did you mean: 'get_session'?
+Traceback (most recent call last):
+  File "C:\Users\zadec\Desktop\CS_Projects\LoLMinimapCV\train_yolov8s.py", line 72, in <module>
+    main()
+  File "C:\Users\zadec\Desktop\CS_Projects\LoLMinimapCV\train_yolov8s.py", line 62, in main
+    model.train(**train_kwargs)
+  File "C:\Users\zadec\AppData\Roaming\Python\Python312\site-packages\ultralytics\engine\model.py", line 802, in train
+    self.trainer.train()
+  File "C:\Users\zadec\AppData\Roaming\Python\Python312\site-packages\ultralytics\engine\trainer.py", line 207, in train
+    self._do_train(world_size)
+  File "C:\Users\zadec\AppData\Roaming\Python\Python312\site-packages\ultralytics\engine\trainer.py", line 458, in _do_train
+    self.run_callbacks("on_fit_epoch_end")
+  File "C:\Users\zadec\AppData\Roaming\Python\Python312\site-packages\ultralytics\engine\trainer.py", line 168, in run_callbacks
+    callback(self)
+  File "C:\Users\zadec\AppData\Roaming\Python\Python312\site-packages\ultralytics\utils\callbacks\raytune.py", line 17, in on_fit_epoch_end
+    if ray.train._internal.session._get_session():  # replacement for deprecated ray.tune.is_session_enabled()
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'ray.train._internal.session' has no attribute '_get_session'. Did you mean: 'get_session'?

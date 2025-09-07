@@ -2,9 +2,9 @@ dragontail-15.17.1/
 # ignore all contents recursively
 /dataset/images/**
 /dataset/labels/**
+/dataset_split/
 imgs/
 runs/
-LoLMinimapCV/
 # but keep a placeholder file so the dirs exist in git
 !/dataset/images/.gitkeep
 !/dataset/labels/.gitkeep
